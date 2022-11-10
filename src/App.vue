@@ -24,7 +24,7 @@ export default {
 </script>
 
 <template>
-  <div class="container">
+  <main class="container">
     <Digit :value="Math.floor(time.getHours() / 10)" />
     <Digit :value="time.getHours() % 10" />
     <hr />
@@ -33,7 +33,10 @@ export default {
     <hr />
     <Digit :value="Math.floor(time.getSeconds() / 10)" />
     <Digit :value="time.getSeconds() % 10" />
-  </div>
+  </main>
+  <footer>
+    Made with <span style="color:#e25555">♥</span> by <a href="https://github.com/MewesK" target="_blank"><strong>mewk</strong></a>
+  </footer>
 </template>
 
 <style scoped>
@@ -45,11 +48,31 @@ export default {
   transform: translate(-50%, -50%);
 
   display: flex;
-  gap: 1rem;
+  gap: 2vmin;
 }
 
 hr {
- margin:  1rem;
- border-color: #ffffff10;
+  border-color: #ffffff10;
+}
+
+footer {
+  position: fixed;
+  bottom: 1vmin;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #ffffff;
+  font-family: "Manrope", sans-serif;
+  font-weight: 100;
+  font-size: 1.1vmin;
+  opacity: 0.03;
+}
+
+footer:hover {
+  opacity: 0.33;
+}
+
+footer a {
+  color: #ffffff;
+  text-decoration: none;
 }
 </style>

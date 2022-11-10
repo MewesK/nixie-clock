@@ -21,14 +21,14 @@ export default {
 
 <style scoped>
 .tube {
-  width: 12.5rem;
-  height: 22rem;
+  width: 12vmin;
+  height: 21vmin;
 
-  border: 1px solid #ffffff09;
-  border-radius: 4rem 4rem 0 0;
+  border: 0.005vmin solid #ffffff09;
+  border-radius: 4vmin 4vmin 0 0;
   border-bottom-width: 0;
   background: radial-gradient(
-    circle 30rem at 50% 77%,
+    circle 29vmin at 50% 77%,
     #00000000,
     #00000000 50%,
     #e0e0e070 75%
@@ -37,14 +37,13 @@ export default {
 
 .tube::after {
   position: relative;
-  bottom: -22rem;
-  left: -0.25rem;
+  width: 13vmin;
+  height: 7vmin;
+  bottom: -21vmin;
+  left: -0.5vmin;
 
   content: "";
   display: block;
-  width: 13rem;
-  height: 8rem;
-
   background: linear-gradient(
     0.25turn,
     #ffffffa0,
@@ -61,33 +60,32 @@ export default {
 }
 
 .digit {
-  width: 13rem;
   position: absolute;
-  top: -1rem;
+  width: inherit;
+  top: -1vmin;
+
   font-family: "Advent Pro", sans-serif;
   font-weight: 100;
-  font-size: 20rem;
+  font-size: 20vmin;
   text-align: center;
   color: #20202040;
 }
 
 .active {
   color: #ffc703d0;
-  text-shadow: 0px 0px 0.5rem #ffc703, 0px 0px 2rem #ff5703,
-    0px 0px 3rem #ff570340;
+  text-shadow: 0px 0px 1vmin #ffc703, 0px 0px 3vmin #ff5703, 0px 0px 4vmin #ff570340;
 }
 
 .mesh {
-  width: 11rem;
-  height: 20rem;
   position: absolute;
-  top: 1rem;
-  margin-left: 1rem;
+  width: 10vmin;
+  height: 19vmin;
+  top: 2.2vmin;
+  margin-left: 1vmin;
+  
   background-image: url("../assets/mesh.svg");
   background-repeat: no-repeat;
-  background-size: 10rem;
   background-position: center, 50%, 50%;
-  background-blend-mode: difference;
   opacity: 0.5;
 }
 </style>
